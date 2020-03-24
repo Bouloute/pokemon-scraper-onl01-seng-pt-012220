@@ -21,6 +21,6 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ?
     SQL
 
-    db.execute(sql, id)[0]
+    db.execute(sql, id).map{|pokemon_data| self.new(pokemon_data[1], pokemon_data[2], pokemon_data[0], db)}[0]
   end
 end
