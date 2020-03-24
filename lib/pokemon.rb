@@ -12,7 +12,7 @@ class Pokemon
     sql = <<-SQL
       INSERT INTO pokemon (name, type) VALUE (?, ?)
     SQL
-    binding.pry
+    
     db.execute(sql, name, type)
   end
 end
