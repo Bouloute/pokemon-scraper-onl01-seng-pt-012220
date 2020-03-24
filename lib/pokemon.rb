@@ -13,6 +13,6 @@ class Pokemon
       INSERT INTO pokemons (name, type) VALUE (?, ?)
     SQL
     binding.pry
-    db[:conn].execute(sql, name, type)
+    db.execute(sql, name, type)
   end
 end
