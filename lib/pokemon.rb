@@ -12,7 +12,7 @@ class Pokemon
     sql = <<-SQL
       INSERT INTO pokemons (name, type) VALUE (?, ?)
     SQL
-
+    binding.pry
     db[:conn].execute(sql, name, type)
   end
 end
